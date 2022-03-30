@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 10vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar .nav-brand {
+  margin-left: 36px;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar .nav-items {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 60px;
+  padding: 30px 0;
+  margin: auto;
+  width: 100%;
+  gap: 1.5em;
+  background: blue;
+  left: 100%;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.navbar .nav-list a {
+  color: white;
+}
+
+.navbar .hamburger {
+  display: block;
+  margin-right: 36px;
+}
+
+.navbar .hamburger .bar {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 5px auto;
+  cursor: pointer;
+  -webkit-transition: 0.5 ease-in-out;
+  transition: 0.5 ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+}
+
+.navbar .hamburger.aktif .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar .hamburger.aktif .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+
+.navbar .hamburger.aktif .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+
+.navbar .nav-items.aktif {
+  left: 0;
+}
+
+@media (min-width: 600px) {
+  .navbar .nav-items {
+    position: static;
+    left: 0;
+    width: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+    background: 0;
+    margin-right: 36px;
+    transition: none;
+    -webkit-transition: none;
+  }
+  .navbar .hamburger {
+    display: none;
+    transition: none;
+    -webkit-transition: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
